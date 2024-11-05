@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CKD Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h3 {
+            background-color: #000000; /* Add a background color to the heading */
+            padding: 120px; /* Add padding to the heading */
+            margin-bottom: 200px; /* Add margin to create space below the heading */
+        }
+    </style>
+</head>
+<body>
+    <h3>CKD Prediction Result</h3>
+
+    <!-- Display CKD Ranges in a Table -->
+    <h2>CKD Ranges</h2>
+    <table>
+        <tr>
+            <th>Parameter</th>
+            <th>Range</th>
+        </tr>
+        <tr>
+            <td>Specific Gravity</td>
+            <td>1.005 to 1.030</td>
+        </tr>
+        <tr>
+            <td>Hypertension (Blood Pressure)</td>
+            <td>90 mm Hg to 140 mm Hg</td>
+        </tr>
+        <tr>
+            <td>Haemoglobin</td>
+            <td>12.0 to 15.5 g/dL</td>
+        </tr>
+        <tr>
+            <td>Diabetes Mellitus (Blood Sugar)</td>
+            <td>Above 126 mg/dL</td>
+        </tr>
+        <tr>
+            <td>Albumin</td>
+            <td>Above 30 mg/dL</td>
+        </tr>
+        <tr>
+            <td>Serum Creatinine</td>
+            <td>Above 5.0 mg/dL (adults)</td>
+        </tr>
+        <tr>
+            <td>Anemia</td>
+            <td>Below 60 mg/dL</td>
+        </tr>
+        <tr>
+            <td>Pus Cell (Urine Analysis)</td>
+            <td>Above 8 pus cells</td>
+        </tr>
+    </table>
+
+    <!-- Display Prediction Result in a Table -->
+    <h2>Prediction Result</h2>
+    <table>
+        <tr>
+            <th>Input Parameter</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Specific Gravity</td>
+            <td>{{ specific_gravity }}</td>
+        </tr>
+        <tr>
+            <td>Hypertension</td>
+            <td>{{ hypertension }}</td>
+        </tr>
+        <tr>
+            <td>Haemoglobin</td>
+            <td>{{ haemoglobin }}</td>
+        </tr>
+        <tr>
+            <td>Diabetes Mellitus</td>
+            <td>{{ diabetes_mellitus }}</td>
+        </tr>
+        <tr>
+            <td>Albumin</td>
+            <td>{{ albumin }}</td>
+        </tr>
+        <tr>
+            <td>Serum Creatinine</td>
+            <td>{{ serum_creatinine }}</td>
+        </tr>
+        <tr>
+            <td>Anemia</td>
+            <td>{{ aanemia }}</td>
+        </tr>
+        <tr>
+            <td>Pus Cell (Urine Analysis)</td>
+            <td>{{ pus_cell }}</td>
+        </tr>
+        <tr>
+            <td>Prediction Result</td>
+            <td><strong>{{ prediction_result }}</strong></td>
+        </tr>
+    </table>
+
+    <!-- Add a Download Button for the Results -->
+    <!--<div class="download-button">
+        <a href="{{ url_for('generate_report_pdf_route') }}" download="CKD_Prediction_Report.pdf">Download PDF Report</a>
+    </div>-->
+
+
+    
+</body>
+</html>
