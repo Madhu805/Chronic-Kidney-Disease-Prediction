@@ -19,7 +19,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/ckd-prediction.git
+git clone https://github.com/Madhu805/Chronic-Kidney-Disease-Prediction.git
 Navigate to the project directory:
 
 bash
